@@ -38,7 +38,7 @@ export default function App() {
         </a>
 
         <span>
-          &copy; {new Date().getFullYear()} Travel Advisor. Check out{" "}
+          &copy; {new Date().getFullYear()}. Check out{" "}
           <a
             href="https://dhportfoliov2.vercel.app/"
             target="_blank"
