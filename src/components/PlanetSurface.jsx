@@ -1,9 +1,17 @@
 import React, { useRef } from "react";
 
+const hostOf = (url) => {
+  try {
+    return new URL(url).host;
+  } catch {
+    return url;
+  }
+};
+
 /**
  * The project info, laid out as features of the planet's land:
  * a ridge line, craters, the title carved into the ground, the screenshot
- * sitting in a crater, and a landing beacon for the link.
+ * on a floating holo-monitor, and a landing beacon for the link.
  * Visibility is driven by the --c custom property set by App.
  */
 export default function PlanetSurface({ title, description, image, link, planet }) {
@@ -66,10 +74,34 @@ export default function PlanetSurface({ title, description, image, link, planet 
           </a>
         </div>
 
-        <div className="land-item crater-view" style={{ "--d": 0.15, "--z": 2.4 }}>
-          <div className="crater-rim" />
-          <img src={image} alt={title} />
-        </div>
+        <a
+          href={link}
+          target="_blank"
+          rel="noopener noreferrer"
+          tabIndex={-1}
+          className="land-item viewport"
+          style={{ "--d": 0.15, "--z": 2.4 }}
+        >
+          <div className="viewport-frame">
+            <div className="viewport-body">
+              <div className="viewport-bar">
+                <span className="viewport-dots" aria-hidden="true">
+                  <i />
+                  <i />
+                  <i />
+                </span>
+                <span className="viewport-url">{hostOf(link)}</span>
+                <span className="viewport-live">Live</span>
+              </div>
+              <div className="viewport-screen">
+                <img src={image} alt={`${title} screenshot`} />
+                <span className="viewport-open" aria-hidden="true">
+                  Open site &#8599;
+                </span>
+              </div>
+            </div>
+          </div>
+        </a>
       </div>
     </div>
   );
