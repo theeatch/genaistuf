@@ -6,7 +6,7 @@ export const projects = [
     description:
       "Enter your ingredients and preferences to generate a delicate recipe.",
     image: "/resto.png",
-    link: "https://recipe-gen-seven.vercel.app/home",
+    link: "https://la-patite-bistro.vercel.app/",
     planet: {
       name: "Planet Savoria",
       c1: "#ff9a4d",
@@ -21,7 +21,7 @@ export const projects = [
     description:
       "Enter your preferences and get personalized travel recommendations.",
     image: "/voyage.png",
-    link: "https://travel-adv-wy3x.vercel.app/",
+    link: "https://cicerone-voyage.vercel.app/",
     planet: {
       name: "Planet Voyagea",
       c1: "#7de3ff",
