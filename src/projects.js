@@ -5,7 +5,7 @@ export const projects = [
     title: "Recipe Generator AI!",
     description:
       "Enter your ingredients and preferences to generate a delicate recipe.",
-    image: "/ratata.png",
+    image: "/resto.png",
     link: "https://recipe-gen-seven.vercel.app/home",
     planet: {
       name: "Planet Savoria",
@@ -20,7 +20,7 @@ export const projects = [
     title: "Travel Advisor AI!",
     description:
       "Enter your preferences and get personalized travel recommendations.",
-    image: "/traveler.png",
+    image: "/voyage.png",
     link: "https://travel-adv-wy3x.vercel.app/",
     planet: {
       name: "Planet Voyagea",
